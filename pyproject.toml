@@ -27,4 +27,4 @@ dependencies = [
 ]
 
 [project.scripts]
-regexrename="regexrename:main"
+regexrename="jmullan.regexrename.main:main"
