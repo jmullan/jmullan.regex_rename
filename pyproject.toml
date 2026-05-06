@@ -1,21 +1,12 @@
 [build-system]
 requires = ["flit"]
-build-backend = "flit.buildapi"
-
-[tool.flit.metadata]
-module = "regexrename"
-author = "Jesse Mullan"
-author-email = "jmullan@gmail.com"
-home-page = "http://github.com/jmullan/regexrename"
-
-[tool.flit.scripts]
-regexrename="regexrename:main"
+build-backend = "flit_core.buildapi"
 
 
 [project]
 name = "jmullan.regexrename"
-dynamic = ["version"]
 description = "Rename files using the power of regexes."
+version = "0.0.1"
 authors = [
   {name = "Jesse Mullan", email = "jmullan@gmail.com"}
 ]
@@ -33,5 +24,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 license = {text = "MIT license"}
 dependencies = [
-    "flit"
 ]
+
+[project.scripts]
+regexrename="regexrename:main"
