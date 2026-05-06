@@ -1,3 +1,5 @@
+Rename files using the power of regexes.
+
 Installation:
 
     pip3 install flit

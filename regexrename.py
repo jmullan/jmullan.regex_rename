@@ -175,9 +175,12 @@ def main():
                     sys.stdout.write('%s %s to %s\n' % (
                         action, from_filename, to_filename))
                 if copy_only:
-                    shutil.move(from_filename, to_filename)
+                    if Path(from_filename).is_dir():
+                        shutil.copytree(from_filename, to_filename)
+                    else:
+                        shutil.copy2(from_filename, to_filename)
                 else:
-                    shutil.copy(from_filename, to_filename)
+                    shutil.move(from_filename, to_filename)
             except Exception as ex:
                 sys.stderr.write(
                     "%s not %s to %s: %s\n" % (

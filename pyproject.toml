@@ -10,3 +10,28 @@ home-page = "http://github.com/jmullan/regexrename"
 
 [tool.flit.scripts]
 regexrename="regexrename:main"
+
+
+[project]
+name = "jmullan.regexrename"
+dynamic = ["version"]
+description = "Rename files using the power of regexes."
+authors = [
+  {name = "Jesse Mullan", email = "jmullan@gmail.com"}
+]
+maintainers = [
+  {name = "Jesse Mullan", email = "jmullan@gmail.com"}
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+readme = "README.md"
+requires-python = ">=3.13"
+license = {text = "MIT license"}
+dependencies = [
+    "flit"
+]
